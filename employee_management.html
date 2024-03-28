@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tbody tr:hover {
+      background-color: #ddd;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Employee Management</h1>
+  </header>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="add_employee.html"><button>Add Employee</button></a>
+
+  </nav>
+  <section>
+    <h2>Employee List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Dheeraj Sharma</td>
+          <td>dsharma259889@gmail.com</td>
+          <td>Admin</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Akash Singh</td>
+          <td>akashsingh@gmail.com</td>
+          <td>Employee</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Sachin Pal</td>
+          <td>sachinpal123@gmail.com</td>
+          <td>Customer</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
