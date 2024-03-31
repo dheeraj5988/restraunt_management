@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .order-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .order {
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .order h3 {
+      margin-bottom: 10px;
+    }
+    .order p {
+      margin: 5px 0;
+    }
+    .order-actions {
+      text-align: right;
+    }
+    .order-actions button {
+      padding: 6px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    .order-actions button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Orders</h1>
+  </header>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="employee_management.html">Employee Management</a>
+    <a href="items.html">Item Management</a>
+    <a href="add_order.html">Add Order</a>
+    <!-- Add more navigation links as needed -->
+  </nav>
+  <section>
+    <h2>Recent Orders</h2>
+    <div class="order-container">
+      <div class="order">
+        <h3>Order #001</h3>
+        <p>Customer: John Doe</p>
+        <p>Items: Pizza, Burger, Fries</p>
+        <p>Total: $25.99</p>
+        <div class="order-actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <div class="order">
+        <h3>Order #002</h3>
+        <p>Customer: Jane Smith</p>
+        <p>Items: Salad, Sandwich, Drink</p>
+        <p>Total: $15.50</p>
+        <div class="order-actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <!-- Add more orders as needed -->
+    </div>
+  </section>
+</body>
+</html>

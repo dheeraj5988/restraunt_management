@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Item Management</h1>
+  </header>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="employee_management.html">Employee Management</a>
+    <a href="orders.html">Orders</a>
+    <!-- Add more navigation links as needed -->
+  </nav>
+  <section>
+    <h2>Add Items</h2>
+    <form action="#" method="post">
+      <label for="item_id">Item ID:</label>
+      <input type="text" name="item_id" id="item_id" required>
+      
+      <label for="item">Select Item:</label>
+      <select name="item" id="item" onchange="showItemInfo()">
+        <option value="1">Pizza</option>
+        <option value="2">Burger</option>
+        <option value="3">Fries</option>
+        <option value="4">Salad</option>
+        <option value="5">Sandwich</option>
+        <option value="6">Drink</option>
+        <option value="7">Roti</option>
+        <option value="8">Paneer butter masala</option>
+        <!-- Add more options as needed -->
+      </select>
+      
+      <label for="description">Item Description:</label>
+      <input type="text" name="description" id="description" readonly>
+      
+      <label for="price">Price:</label>
+      <input type="text" name="price" id="price" readonly>
+      
+      <label for="custom_item">Custom Item:</label>
+      <input type="text" name="custom_item" id="custom_item" placeholder="Enter custom item">
+      <input type="submit" value="Add Item">
+    </form>
+  </section>
+
+  <script>
+    function showItemInfo() {
+      var itemSelect = document.getElementById('item');
+      var itemDescription = document.getElementById('description');
+      var itemPrice = document.getElementById('price');
+
+      switch(itemSelect.value) {
+        case '1':
+          itemDescription.value = "Delicious pizza with assorted toppings.";
+          itemPrice.value = "$10.99";
+          break;
+        case '2':
+          itemDescription.value = "Juicy burger with cheese, lettuce, and tomato.";
+          itemPrice.value = "$8.99";
+          break;
+        case '3':
+          itemDescription.value = "Crispy fries served with ketchup.";
+          itemPrice.value = "$3.99";
+          break;
+        case '4':
+          itemDescription.value = "Fresh salad with mixed greens and dressing.";
+          itemPrice.value = "$6.99";
+          break;
+        case '5':
+          itemDescription.value = "Classic sandwich with ham, cheese, and vegetables.";
+          itemPrice.value = "$7.99";
+          break;
+        case '6':
+          itemDescription.value = "Refreshing drink of your choice.";
+          itemPrice.value = "$2.99";
+          break;
+        case '7':
+          itemDescription.value = "Traditional Indian flatbread.";
+          itemPrice.value = "$1.99";
+          break;
+        case '8':
+          itemDescription.value = "Creamy paneer cooked in a rich buttery sauce.";
+          itemPrice.value = "$12.99";
+          break;
+        // Add more cases for additional items as needed
+        default:
+          itemDescription.value = "";
+          itemPrice.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
