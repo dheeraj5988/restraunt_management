@@ -27,6 +27,7 @@
     }
     input[type="text"],
     input[type="email"],
+    input[type="tel"],
     select {
       width: 100%;
       padding: 10px;
@@ -55,7 +56,10 @@
     <h1>Add Employee</h1>
   </header>
   <form action="add_employee.php" method="post">
+    <input type="text" name="id" placeholder="ID" required>
     <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="address" placeholder="Address" required>
+    <input type="tel" name="mobile" placeholder="Mobile Number" required>
     <input type="email" name="email" placeholder="Email" required>
     <select name="role" required>
       <option value="" disabled selected>Select Role</option>
