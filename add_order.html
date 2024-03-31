@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    select, input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Add Order</h1>
+  </header>
+  <form action="#" method="post" id="orderForm">
+    <label for="customer_id">Customer ID:</label>
+    <input type="text" name="customer_id" id="customer_id" required>
+    
+    <label for="customer_name">Customer Name:</label>
+    <input type="text" name="customer_name" id="customer_name" required>
+    
+    <label for="category">Select Category:</label>
+    <select name="category" id="category" onchange="showItems()">
+      <option value="main_course">Main Course</option>
+      <option value="drinks">Drinks</option>
+      <option value="starter">Starter</option>
+      <option value="desert">Desert</option>
+      <option value="combo">Combo</option>
+      <!-- Add more categories as needed -->
+    </select>
+    
+    <div id="mainCourseItems" style="display: block;">
+      <label for="main_course">Select Main Course:</label>
+      <select name="main_course" id="main_course" required>
+        <option value="Pizza">Pizza</option>
+        <option value="Burger">Burger</option>
+        <option value="Fries">Fries</option>
+        <option value="Salad">Salad</option>
+        <option value="Sandwich">Sandwich</option>
+        <option value="Roti">Roti</option>
+        <option value="Paneer butter masala">Paneer Butter Masala</option>
+        <!-- Add more main course items as needed -->
+      </select>
+    </div>
+    
+    <div id="drinkItems" style="display: none;">
+      <label for="drink">Select Drink:</label>
+      <select name="drink" id="drink" required>
+        <option value="Coke">Coke</option>
+        <option value="Pepsi">Pepsi</option>
+        <option value="Lemonade">Lemonade</option>
+        <option value="Iced Tea">Iced Tea</option>
+        <!-- Add more drink items as needed -->
+      </select>
+    </div>
+    
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity" min="1" required>
+    
+    <input type="submit" value="Add Order">
+  </form>
+
+  <script>
+    function showItems() {
+      var category = document.getElementById('category').value;
+      if (category === 'main_course') {
+        document.getElementById('mainCourseItems').style.display = 'block';
+        document.getElementById('drinkItems').style.display = 'none';
+      } else if (category === 'drinks') {
+        document.getElementById('mainCourseItems').style.display = 'none';
+        document.getElementById('drinkItems').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
